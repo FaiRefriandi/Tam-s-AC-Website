@@ -64,65 +64,64 @@ export default function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm font-bold text-gray-900 mb-2">
+                  Nama Lengkap
+                </label>
+                <Input
+                  type="text"
+                  placeholder="Masukkan nama Anda"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  required
+                  className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-gray-900 mb-2">
+                  Nomor Telepon / WhatsApp
+                </label>
+                <Input
+                  type="tel"
+                  placeholder="08xx xxxx xxxx"
+                  value={formData.phone}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
+                  required
+                  className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-gray-900 mb-2">
+                  Layanan yang Dibutuhkan
+                </label>
+                <Textarea
+                  placeholder="Contoh: AC tidak dingin, perlu cuci AC, ganti kompresor, dll."
+                  value={formData.service}
+                  onChange={(e) =>
+                    setFormData({ ...formData, service: e.target.value })
+                  }
+                  required
+                  rows={4}
+                  className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
+                />
+              </div>
+              <Button
+                type="submit"
+                className="w-full bg-[#FF0000] hover:bg-[#cc0000] rounded-xl shadow-md transform hover:scale-102 transition-all py-6 text-base md:text-lg"
+                disabled={loading}
+              >
+                <Send className="w-5 h-5 mr-2" />
+                {loading ? "Mengirim..." : "Kirim Permintaan"}
+              </Button>
+            </form>
+          </div>
           <div className="space-y-6">
-            <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-bold text-gray-900 mb-2">
-                    Nama Lengkap
-                  </label>
-                  <Input
-                    type="text"
-                    placeholder="Masukkan nama Anda"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    required
-                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-900 mb-2">
-                    Nomor Telepon / WhatsApp
-                  </label>
-                  <Input
-                    type="tel"
-                    placeholder="08xx xxxx xxxx"
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                    required
-                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-900 mb-2">
-                    Layanan yang Dibutuhkan
-                  </label>
-                  <Textarea
-                    placeholder="Contoh: AC tidak dingin, perlu cuci AC, ganti kompresor, dll."
-                    value={formData.service}
-                    onChange={(e) =>
-                      setFormData({ ...formData, service: e.target.value })
-                    }
-                    required
-                    rows={4}
-                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-[#FF0000] hover:bg-[#cc0000] rounded-xl shadow-md transform hover:scale-102 transition-all py-6 text-base md:text-lg"
-                  disabled={loading}
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  {loading ? "Mengirim..." : "Kirim Permintaan"}
-                </Button>
-              </form>
-            </div>
-
             <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-6 md:p-8 space-y-6 md:space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FF0000] rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0">
