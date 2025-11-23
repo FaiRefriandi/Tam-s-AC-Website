@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Tam's AC - Solusi AC Mobil & Bus Terpercaya",
     description:
       "Bengkel AC kendaraan profesional di Bandung. Melayani servis, perawatan, dan perbaikan AC mobil & bus dengan harga transparan dan bergaransi.",
-    url: "https://tamsac.netlify.app",
+    url: "https://tamsac.vercel.app",
     siteName: "Tam's AC Bandung",
     images: [
       {
@@ -89,9 +89,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     name: "Tam's AC Mobil & Bus",
-    image: "https://tamsac.netlify.app/images/logo.png",
-    "@id": "https://tamsac.netlify.app",
-    url: "https://tamsac.netlify.app",
+    image: "https://tamsac.vercel.app/images/logo.png",
+    "@id": "https://tamsac.vercel.app",
+    url: "https://tamsac.vercel.app",
     telephone: "+6287825263379",
     email: "tamsirac999@gmail.com",
     address: {

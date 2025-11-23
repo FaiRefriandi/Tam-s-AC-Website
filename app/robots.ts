@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://tamsac.netlify.app"; // Replace with actual domain
+  const baseUrl = "https://tamsac.vercel.app"; // Replace with actual domain
 
   return {
     rules: {
