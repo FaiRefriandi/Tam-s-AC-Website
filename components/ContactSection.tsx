@@ -67,10 +67,7 @@ export default function ContactSection() {
           {/* Form and Contact Info Side by Side */}
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-8 h-full">
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-6 h-full flex flex-col"
-              >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-900 mb-2">
                     Nama Lengkap
@@ -101,7 +98,7 @@ export default function ContactSection() {
                     className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
                   />
                 </div>
-                <div className="flex-1">
+                <div>
                   <label className="block text-sm font-bold text-gray-900 mb-2">
                     Layanan yang Dibutuhkan
                   </label>
@@ -113,7 +110,7 @@ export default function ContactSection() {
                     }
                     required
                     rows={3}
-                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl h-full resize-none"
+                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl resize-none"
                   />
                 </div>
                 <Button
