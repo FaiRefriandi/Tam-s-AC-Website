@@ -19,7 +19,7 @@ export default function HeroSection() {
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm">
               <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
               <span className="text-gray-900 font-bold">
-                Dipercaya Sejak 2010
+                Layanan Berkualitas
               </span>
             </div>
 

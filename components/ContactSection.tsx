@@ -63,66 +63,71 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block text-sm font-bold text-gray-900 mb-2">
-                  Nama Lengkap
-                </label>
-                <Input
-                  type="text"
-                  placeholder="Masukkan nama Anda"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  required
-                  className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-900 mb-2">
-                  Nomor Telepon / WhatsApp
-                </label>
-                <Input
-                  type="tel"
-                  placeholder="08xx xxxx xxxx"
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  required
-                  className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-900 mb-2">
-                  Layanan yang Dibutuhkan
-                </label>
-                <Textarea
-                  placeholder="Contoh: AC tidak dingin, perlu cuci AC, ganti kompresor, dll."
-                  value={formData.service}
-                  onChange={(e) =>
-                    setFormData({ ...formData, service: e.target.value })
-                  }
-                  required
-                  rows={4}
-                  className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-[#FF0000] hover:bg-[#cc0000] rounded-xl shadow-md transform hover:scale-102 transition-all py-6 text-base md:text-lg"
-                disabled={loading}
+        <div className="max-w-6xl mx-auto space-y-8">
+          {/* Form and Contact Info Side by Side */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-8 h-full">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6 h-full flex flex-col"
               >
-                <Send className="w-5 h-5 mr-2" />
-                {loading ? "Mengirim..." : "Kirim Permintaan"}
-              </Button>
-            </form>
-          </div>
-          <div className="space-y-6">
-            <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-6 md:p-8 space-y-6 md:space-y-8">
+                <div>
+                  <label className="block text-sm font-bold text-gray-900 mb-2">
+                    Nama Lengkap
+                  </label>
+                  <Input
+                    type="text"
+                    placeholder="Masukkan nama Anda"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    required
+                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-gray-900 mb-2">
+                    Nomor Telepon / WhatsApp
+                  </label>
+                  <Input
+                    type="tel"
+                    placeholder="08xx xxxx xxxx"
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                    required
+                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl"
+                  />
+                </div>
+                <div className="flex-1">
+                  <label className="block text-sm font-bold text-gray-900 mb-2">
+                    Layanan yang Dibutuhkan
+                  </label>
+                  <Textarea
+                    placeholder="Contoh: AC tidak dingin, perlu cuci AC, ganti kompresor, dll."
+                    value={formData.service}
+                    onChange={(e) =>
+                      setFormData({ ...formData, service: e.target.value })
+                    }
+                    required
+                    rows={3}
+                    className="w-full bg-white border-gray-300 focus:border-[#FF0000] rounded-xl h-full resize-none"
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  className="w-full bg-[#FF0000] hover:bg-[#cc0000] rounded-xl shadow-md transform hover:scale-102 transition-all py-6 text-base md:text-lg mt-auto"
+                  disabled={loading}
+                >
+                  <Send className="w-5 h-5 mr-2" />
+                  {loading ? "Mengirim..." : "Kirim Permintaan"}
+                </Button>
+              </form>
+            </div>
+
+            <div className="bg-white border-2 border-gray-200 rounded-3xl shadow-md p-6 md:p-8 space-y-6 md:space-y-8 h-full">
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FF0000] rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6 text-white" />
@@ -185,18 +190,19 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="relative rounded-3xl overflow-hidden shadow-lg h-80 border-4 border-white">
-              <iframe
-                src="https://maps.google.com/maps?q=Tam's+AC+Mobil+Bandung&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+          {/* Map Centered Below */}
+          <div className="relative rounded-3xl overflow-hidden shadow-lg h-80 border-4 border-white max-w-4xl mx-auto">
+            <iframe
+              src="https://maps.google.com/maps?q=Tam's+AC+Mobil+Bandung&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
