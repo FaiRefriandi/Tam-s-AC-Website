@@ -92,32 +92,6 @@ export default function Footer() {
                 Fai Refriandi
               </a>
             </p>
-            <div className="flex space-x-8 text-sm">
-              <a
-                href="#home"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Beranda
-              </a>
-              <a
-                href="#services"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Layanan
-              </a>
-              <a
-                href="#testimonials"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Testimoni
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Kontak
-              </a>
-            </div>
           </div>
         </div>
       </div>
