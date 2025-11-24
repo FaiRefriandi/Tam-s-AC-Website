@@ -87,6 +87,17 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               © 2025 Tam's AC. All rights reserved.
             </p>
+            <p className="text-gray-400 text-sm">
+              Dibuat oleh{" "}
+              <a
+                href="https://frefriandi.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#FF0000] transition-colors font-medium"
+              >
+                Fai Refriandi
+              </a>
+            </p>
             <div className="flex space-x-8 text-sm">
               <a
                 href="#home"
