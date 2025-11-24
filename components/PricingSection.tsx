@@ -4,7 +4,7 @@ import { Check, Sparkles } from "lucide-react";
 
 const packages = [
   {
-    name: "Cuci AC Basic",
+    name: "Service AC Basic",
     price: "Mulai 150K",
     description: "Perawatan dasar untuk menjaga AC tetap bersih",
     features: [
@@ -27,7 +27,7 @@ const packages = [
       "Cek sistem kelistrikan",
       "Pembersihan kondensor",
       "Cek kompresor",
-      "Garansi 30 hari",
+      "Garansi",
     ],
     popular: true,
     color: "text-purple-600",
