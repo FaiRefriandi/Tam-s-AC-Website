@@ -59,7 +59,7 @@ export default function HeroSection() {
               </a>
             </div>
 
-            <div className="flex items-start space-x-3 bg-white border border-gray-200 p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm w-full sm:w-auto sm:max-w-max">
+            <div className="flex items-start space-x-3 bg-white border border-gray-200 p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm w-full">
               <MapPin className="w-5 h-5 md:w-6 md:h-6 text-[#FF0000] mt-0.5 md:mt-1 flex-shrink-0" />
               <div>
                 <p className="font-bold text-gray-900 text-sm md:text-base">
