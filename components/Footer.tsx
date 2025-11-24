@@ -54,29 +54,23 @@ export default function Footer() {
               Kontak
             </h4>
             <ul className="space-y-4 text-gray-300">
-              <li className="flex items-start space-x-3 group">
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+              <li className="flex items-start space-x-3">
+                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="group-hover:text-white transition-colors">
-                  Jl. Gatot Subroto No.201, Bandung, Jawa Barat
-                </span>
+                <span>Jl. Gatot Subroto No.201, Bandung, Jawa Barat</span>
               </li>
-              <li className="flex items-center space-x-3 group">
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="group-hover:text-white transition-colors">
-                  +62 878-2526-3379
-                </span>
+                <span>+62 878-2526-3379</span>
               </li>
-              <li className="flex items-center space-x-3 group">
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="group-hover:text-white transition-colors">
-                  tamsirac999@gmail.com
-                </span>
+                <span>tamsirac999@gmail.com</span>
               </li>
             </ul>
           </div>
