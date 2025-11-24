@@ -118,7 +118,7 @@ export default function ContactSection() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-[#FF0000] hover:bg-[#cc0000] rounded-xl shadow-md transform hover:scale-102 transition-all py-6 text-base md:text-lg mt-6"
+                  className="w-full bg-[#FF0000] hover:bg-[#cc0000] rounded-xl shadow-md transform hover:scale-102 transition-all py-6 text-base md:text-lg mt-8"
                   disabled={loading}
                 >
                   <Send className="w-5 h-5 mr-2" />
