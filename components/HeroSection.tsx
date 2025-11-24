@@ -75,7 +75,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border-4 border-white transform hover:scale-102 transition-transform duration-500">
               <img
-                src="https://images.pexels.com/photos/4489743/pexels-photo-4489743.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="public/images/hero.jpg"
                 alt="Mechanic working on car AC"
                 className="w-full h-full object-cover"
               />
