@@ -19,13 +19,6 @@ Professional landing page for Tam's AC, an automotive air-conditioning workshop 
 - **Contact Form**: Functional form that stores submissions via API route
 - **WhatsApp Integration**: Direct WhatsApp links for immediate communication
 
-## Tech Stack
-
-- **Framework**: Next.js 13 (App Router)
-- **Styling**: TailwindCSS
-- **UI Components**: Shadcn/ui (Radix UI)
-- **Icons**: Lucide React
-- **Language**: TypeScript
 
 ## Getting Started
 
